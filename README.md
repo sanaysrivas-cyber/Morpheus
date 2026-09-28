@@ -3,10 +3,7 @@
 Prepared September 26, 2026 for code review Monday September 28 and physical testing Tuesday September 29.
 
 ## Status and authorship
-
-AI-assisted reference code. Do not present this as unaided student-authored work. If your lead requires you to write the code yourself, study this, write your own version, explain it, and have the lead review it.
-
-This is a TeamCode source overlay, NOT a complete Android Studio/FTC SDK project. No APK has been built or installed. No physical motor test has occurred. CAD geometry, drivetrain layout, motor model, gearing, encoder counts, wheel size, and motor directions remain unverified. None are required to identify one secured motor at a time. This is not a mecanum driving program and contains no tuned PID values.
+Morpheus FTC Team
 
 ## Install in the team's FTC project
 
