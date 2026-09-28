@@ -5,10 +5,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-/**
- * AI-assisted reference for commissioning four secured, unloaded drive motors.
- * Not a driving OpMode, autonomous routine, or tuned controller.
- */
 @TeleOp(name = "Morpheus: Four Motor Bench Test", group = "Commissioning")
 public class FourMotorBenchTest extends LinearOpMode {
     private static final double TEST_POWER = 0.15;
@@ -24,8 +20,6 @@ public class FourMotorBenchTest extends LinearOpMode {
             for (int i = 0; i < motors.length; i++) {
                 motors[i] = hardwareMap.get(DcMotor.class, NAMES[i]);
                 motors[i].setPower(0);
-                // Uniform direction for identification. These are NOT verified
-                // chassis directions: mirrored motors may need reversing later.
                 motors[i].setDirection(DcMotorSimple.Direction.FORWARD);
                 motors[i].setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
                 motors[i].setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
@@ -39,7 +33,6 @@ public class FourMotorBenchTest extends LinearOpMode {
             waitForStart();
             if (isStopRequested()) return;
 
-            // No motion from a bumper already held at START. A release is needed.
             boolean ready = false;
             boolean emergencyStop = false;
             boolean burstActive = false;
@@ -69,7 +62,6 @@ public class FourMotorBenchTest extends LinearOpMode {
                         activeReverse = reverse;
                         burstStart = getRuntime();
                     }
-                    // Changing selection/direction or timing out requires release.
                     if (burstActive && (count != 1 || requestedMotor != activeMotor
                             || reverse != activeReverse
                             || getRuntime() - burstStart >= MAX_BURST_SECONDS)) {
@@ -94,7 +86,6 @@ public class FourMotorBenchTest extends LinearOpMode {
                 idle();
             }
         } finally {
-            // Also stop already-mapped motors if initialization fails partway.
             for (DcMotor motor : motors) {
                 if (motor != null) motor.setPower(0);
             }
