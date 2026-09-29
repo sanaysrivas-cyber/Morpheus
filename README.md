@@ -1,3 +1,5 @@
+**Android Studio project:** [Open and build Morpheus](ANDROID_SETUP.md). SolversLib configuration: [TeamCode/build.gradle](TeamCode/build.gradle).
+
 # Morpheus four-motor commissioning reference
 
 Prepared September 26, 2026 for code review Monday September 28 and physical testing Tuesday September 29.
@@ -8,7 +10,7 @@ Morpheus FTC Team
 ## Install in the team's FTC project
 
 1. Use the team's approved FTC Robot Controller SDK project and compatible Robot Controller/Driver Station versions. If there is no project, start from https://github.com/FIRST-Tech-Challenge/FtcRobotController and select the release approved for your season.
-2. Open the full project root in Android Studio, not this overlay folder. Copy `FourMotorBenchTest.java` into `TeamCode/src/main/java/org/firstinspires/ftc/teamcode/`.
+2. Open this repository root in Android Studio. The full FTC project and `FourMotorBenchTest.java` are included; follow [Android Studio setup](ANDROID_SETUP.md).
 3. Configure the four Control Hub motor ports as below. Select the actual motor type; do not guess the model.
 4. Build the Robot Controller app in Android Studio. Resolve any build errors before deployment. Deploy using the team's normal Control Hub connection.
 5. Select `Morpheus: Four Motor Bench Test` in Driver Station TeleOp. INIT must produce no motor motion. Check the controls below before START.
@@ -65,7 +67,7 @@ Record each result in TEST_LOG.csv. Pass only when observed.
 
 Repository: https://github.com/sanaysrivas-cyber/Morpheus
 
-This private repository contains the commissioning source overlay and mock tests. It is not yet a full FTC SDK project. The owner must invite teammates before they can access it. Add the approved FTC SDK project before using this repository as the team's deployable robot project; preserve its upstream license and setup files.
+This private repository includes the full FTC SDK 12.0.0 Android project, SolversLib core 0.3.6, commissioning source, and mock tests. The owner must invite teammates before they can access it. The upstream license and setup files are retained. Follow ANDROID_SETUP.md for cloning, syncing, building, and deploying.
 
 Use a `commissioning/four-motor-test` branch for changes, review them in a pull request, and commit measured direction changes after testing. Do not overwrite another team's or season's project.
 
