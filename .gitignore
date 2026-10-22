@@ -79,3 +79,6 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+# Python verification tools
+__pycache__/
+*.pyc

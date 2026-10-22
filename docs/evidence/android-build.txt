@@ -1,0 +1,83 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.1.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+> Task :TeamCode:preBuild UP-TO-DATE
+> Task :TeamCode:preDebugBuild UP-TO-DATE
+> Task :TeamCode:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :FtcRobotController:preBuild UP-TO-DATE
+> Task :FtcRobotController:preDebugBuild UP-TO-DATE
+> Task :FtcRobotController:generateDebugBuildConfig
+> Task :FtcRobotController:generateDebugResValues UP-TO-DATE
+> Task :FtcRobotController:generateDebugResources UP-TO-DATE
+> Task :FtcRobotController:packageDebugResources UP-TO-DATE
+> Task :FtcRobotController:processDebugNavigationResources UP-TO-DATE
+> Task :FtcRobotController:parseDebugLocalResources UP-TO-DATE
+> Task :FtcRobotController:generateDebugRFile UP-TO-DATE
+> Task :FtcRobotController:javaPreCompileDebug UP-TO-DATE
+
+> Task :FtcRobotController:compileDebugJavaWithJavac
+Note: <checkout>/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/internal/FtcRobotControllerActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :TeamCode:javaPreCompileDebug UP-TO-DATE
+> Task :FtcRobotController:compileDebugLibraryResources UP-TO-DATE
+> Task :FtcRobotController:writeDebugAarMetadata UP-TO-DATE
+> Task :TeamCode:checkDebugAarMetadata UP-TO-DATE
+> Task :TeamCode:processDebugNavigationResources UP-TO-DATE
+> Task :TeamCode:compileDebugNavigationResources UP-TO-DATE
+> Task :TeamCode:generateDebugResValues UP-TO-DATE
+> Task :FtcRobotController:bundleLibCompileToJarDebug
+> Task :TeamCode:mapDebugSourceSetPaths UP-TO-DATE
+> Task :TeamCode:generateDebugResources UP-TO-DATE
+> Task :TeamCode:mergeDebugResources UP-TO-DATE
+> Task :TeamCode:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :FtcRobotController:extractDeepLinksDebug UP-TO-DATE
+> Task :FtcRobotController:processDebugManifest UP-TO-DATE
+> Task :TeamCode:extractDeepLinksDebug UP-TO-DATE
+> Task :TeamCode:processDebugMainManifest UP-TO-DATE
+> Task :TeamCode:processDebugManifest UP-TO-DATE
+> Task :TeamCode:processDebugManifestForPackage UP-TO-DATE
+> Task :TeamCode:processDebugResources UP-TO-DATE
+> Task :TeamCode:compileDebugJavaWithJavac
+> Task :FtcRobotController:mergeDebugShaders UP-TO-DATE
+> Task :FtcRobotController:compileDebugShaders NO-SOURCE
+> Task :FtcRobotController:generateDebugAssets UP-TO-DATE
+> Task :FtcRobotController:mergeDebugAssets UP-TO-DATE
+> Task :TeamCode:mergeDebugShaders UP-TO-DATE
+> Task :TeamCode:compileDebugShaders NO-SOURCE
+> Task :TeamCode:generateDebugAssets UP-TO-DATE
+> Task :TeamCode:mergeDebugAssets UP-TO-DATE
+> Task :TeamCode:compressDebugAssets UP-TO-DATE
+> Task :FtcRobotController:processDebugJavaRes NO-SOURCE
+> Task :TeamCode:processDebugJavaRes NO-SOURCE
+> Task :TeamCode:mergeDebugJavaResource UP-TO-DATE
+> Task :TeamCode:checkDebugDuplicateClasses UP-TO-DATE
+> Task :TeamCode:desugarDebugFileDependencies UP-TO-DATE
+> Task :TeamCode:mergeExtDexDebug UP-TO-DATE
+> Task :FtcRobotController:bundleLibRuntimeToDirDebug
+> Task :TeamCode:dexBuilderDebug
+> Task :FtcRobotController:mergeDebugJniLibFolders UP-TO-DATE
+> Task :FtcRobotController:mergeDebugNativeLibs NO-SOURCE
+> Task :FtcRobotController:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :TeamCode:mergeDebugJniLibFolders UP-TO-DATE
+> Task :TeamCode:mergeDebugNativeLibs UP-TO-DATE
+> Task :TeamCode:stripDebugDebugSymbols UP-TO-DATE
+> Task :TeamCode:validateSigningDebug UP-TO-DATE
+> Task :TeamCode:writeDebugAppMetadata UP-TO-DATE
+> Task :TeamCode:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :TeamCode:mergeProjectDexDebug
+> Task :TeamCode:mergeLibDexDebug
+> Task :TeamCode:packageDebug
+> Task :TeamCode:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :TeamCode:assembleDebug
+
+[Incubating] Problems report is available at: file://<checkout>/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.1.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 4s
+52 actionable tasks: 9 executed, 43 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.1.0/userguide/configuration_cache_enabling.html

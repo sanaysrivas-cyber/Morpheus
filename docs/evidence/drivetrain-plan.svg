@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="560" viewBox="0 0 820 560">
+<rect width="820" height="560" fill="#101924"/>
+<g font-family="sans-serif" fill="#edf2f8">
+<text x="32" y="38" font-size="23">Morpheus — transform-derived drivetrain plan</text>
+<text x="32" y="65" font-size="14" fill="#b9c8d9">Drivetrain frame • +Z front (proposed) • +Y up • +X left • schematic, mm</text>
+<rect x="175" y="165" width="370" height="225" rx="12" fill="#203246" stroke="#65809b"/>
+<path d="M360 132 V92 M350 105 L360 92 L370 105" stroke="#5fe1bf" stroke-width="3" fill="none"/>
+<text x="385" y="110" font-size="16" fill="#5fe1bf">+Z / FRONT</text>
+<rect x="159.98644771317194" y="145.19999999999663" width="58" height="70" rx="12" fill="#c5d9ed"/>
+<path d="M168.98644771317194 160.19999999999663 L208.98644771317194 200.19999999999663" stroke="#182635" stroke-width="7"/>
+<text x="170.98644771317194" y="130.19999999999663" font-size="20">FL</text>
+<text x="142.98644771317194" y="238.19999999999663" font-size="12" fill="#b9c8d9">#1389 · Left part</text>
+<rect x="159.7135522896277" y="329.99999999999665" width="58" height="70" rx="12" fill="#c5d9ed"/>
+<path d="M168.7135522896277 384.99999999999665 L208.7135522896277 344.99999999999665" stroke="#182635" stroke-width="7"/>
+<text x="170.7135522896277" y="314.99999999999665" font-size="20">BL</text>
+<text x="142.7135522896277" y="422.99999999999665" font-size="12" fill="#b9c8d9">#1390 · Right part</text>
+<rect x="501.986447713173" y="145.20000000000462" width="58" height="70" rx="12" fill="#c5d9ed"/>
+<path d="M510.986447713173 200.20000000000462 L550.986447713173 160.20000000000462" stroke="#182635" stroke-width="7"/>
+<text x="512.986447713173" y="130.20000000000462" font-size="20">FR</text>
+<text x="484.986447713173" y="238.20000000000462" font-size="12" fill="#b9c8d9">#1398 · Right part</text>
+<rect x="502.0135522896285" y="330.000000000004" width="58" height="70" rx="12" fill="#c5d9ed"/>
+<path d="M511.0135522896285 345.000000000004 L551.0135522896285 385.000000000004" stroke="#182635" stroke-width="7"/>
+<text x="513.0135522896285" y="315.000000000004" font-size="20">BR</text>
+<text x="485.0135522896285" y="423.000000000004" font-size="12" fill="#b9c8d9">#1407 · Left part</text>
+<text x="620" y="185" font-size="16" fill="#5fe1bf">Top rollers: X</text>
+<text x="620" y="215" font-size="14">Front shafts: +Z</text>
+<text x="620" y="240" font-size="14">Rear shafts: −Y</text>
+<text x="620" y="280" font-size="14">Miter gear pairs.</text>
+<text x="620" y="302" font-size="14">Layout from CAD.</text>
+<text x="32" y="470" font-size="16">Conditional direction prediction: left FORWARD, right REVERSE.</text>
+<text x="32" y="497" font-size="14" fill="#f2c680">Electrical polarity and hub mapping require individual motor commissioning.</text>
+<text x="32" y="530" font-size="12" fill="#b9c8d9">Source: 26MBB-000.stp · 2026-10-21 export · See CAD_DRIVETRAIN_AUDIT.md and cad-transforms.json</text>
+</g></svg>

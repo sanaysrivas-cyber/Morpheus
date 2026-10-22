@@ -15,7 +15,6 @@ public class FourMotorBenchTest extends OpMode {
     };
     private final DcMotor[] motors = new DcMotor[4];
 
-    // Runtime and state variables moved out of the old runOpMode loop so they persist
     private final ElapsedTime runtime = new ElapsedTime();
     private boolean ready = false;
     private boolean emergencyStop = false;
@@ -26,12 +25,17 @@ public class FourMotorBenchTest extends OpMode {
 
     @Override
     public void init() {
-        for (int i = 0; i < motors.length; i++) {
-            motors[i] = hardwareMap.get(DcMotor.class, NAMES[i]);
-            motors[i].setPower(0);
-            motors[i].setDirection(DcMotorSimple.Direction.FORWARD);
-            motors[i].setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-            motors[i].setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        try {
+            for (int i = 0; i < motors.length; i++) {
+                motors[i] = hardwareMap.get(DcMotor.class, NAMES[i]);
+                motors[i].setPower(0);
+                motors[i].setDirection(DcMotorSimple.Direction.FORWARD);
+                motors[i].setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+                motors[i].setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+            }
+        } catch (RuntimeException failure) {
+            stop();
+            throw failure;
         }
 
         telemetry.addLine("Secure motors; lift wheels clear; keep switch accessible.");
@@ -43,7 +47,7 @@ public class FourMotorBenchTest extends OpMode {
 
     @Override
     public void start() {
-        // start the timer and reset state as if just passed waitForStart()
+        stop();
         runtime.reset();
         ready = false;
         emergencyStop = false;
@@ -55,7 +59,6 @@ public class FourMotorBenchTest extends OpMode {
 
     @Override
     public void loop() {
-        // Mirror the original runOpMode logic but in a non-blocking loop
         if (gamepad1.back) emergencyStop = true;
         boolean enable = gamepad1.left_bumper;
         boolean reverse = gamepad1.right_bumper;
@@ -70,12 +73,14 @@ public class FourMotorBenchTest extends OpMode {
             ready = true;
             burstActive = false;
         } else if (!emergencyStop) {
-            if (ready && count == 1) {
+            if (ready) {
                 ready = false;
-                burstActive = true;
-                activeMotor = requestedMotor;
-                activeReverse = reverse;
-                burstStart = runtime.seconds();
+                if (count == 1) {
+                    burstActive = true;
+                    activeMotor = requestedMotor;
+                    activeReverse = reverse;
+                    burstStart = runtime.seconds();
+                }
             }
             if (burstActive && (count != 1 || requestedMotor != activeMotor
                     || reverse != activeReverse
