@@ -20,6 +20,8 @@ The existing tests called runOpMode(), but the production bench class had become
 
 The bench arm could remain available after L1 was pressed with no selection or multiple selections; changing the selection while continuing to hold L1 could then begin a burst. The revised code consumes the arm on the first enabled frame. A valid selection starts a burst; an invalid selection requires releasing L1 again. Timeout, changed corner, changed reverse, button release, and conflicting buttons also require re-arm.
 
+The first remote CI run failed in Android setup before tests/build: setup-android v3 defaulted to the retired SDK package `tools`. The workflow now requests only `platform-tools`, then installs the explicit platform/build-tools packages in the following step. Java tests and the robot implementation are unchanged. Remote CI verifies this runner-specific repair.
+
 ### CAD findings and limits
 
 The read-only STEP audit composes actual placement transforms with inch/mm normalization. It finds an X roller arrangement, four nominal 96 mm wheels, four motors labeled 435 RPM, mirrored miter gear trains, longitudinal front motors and vertical rear motors. The conditional mechanical prediction agrees with provisional left FORWARD/right REVERSE. Actual electrical command direction remains unproven. The front convention is chosen from the intake ramp and must match physical team labeling. See the full [audit](CAD_DRIVETRAIN_AUDIT.md).
