@@ -28,7 +28,7 @@ The read-only STEP audit composes actual placement transforms with inch/mm norma
 
 Both Java behavioral suites pass; the real Android Gradle build and APK inspection are recorded in [SOFTWARE_VALIDATION.md](SOFTWARE_VALIDATION.md). The initial stale harness was replaced based on lifecycle inspection. A later sandboxed Gradle attempt failed before build startup because its local coordination socket was prohibited; the permitted rerun outside that restriction is the relevant build result.
 
-The connected GitHub API rejected branch creation with `403 Resource not accessible by integration`. A normal Git push authentication check also found no stored HTTPS credentials; the browser was signed out. Local changes, commits, and recovery exports are preserved. Remote publishing must be completed using authenticated repository write access; do not describe a local branch as pushed or a prepared description as an opened PR. No merge is authorized.
+Initial publishing attempts were blocked: the GitHub connector rejected branch creation with `403 Resource not accessible by integration`, and local Git had no stored credentials. The owner then authenticated GitHub CLI and configured its Git credential helper. The feature branch was successfully pushed through authenticated Git. Local commits and recovery exports remain available. Review and remote CI are tracked on the GitHub pull request; no merge is authorized.
 
 No robot deployment or physical test occurred. CAD cannot prove wiring, electrical or encoder polarity, traction, stopping latency, stability, or installed part correspondence. All hardware checks remain open.
 
@@ -36,7 +36,7 @@ No robot deployment or physical test occurred. CAD cannot prove wiring, electric
 
 No hardware purchased and no paid service provisioned. Existing Android Studio/SDK used; temporary JDK 17, Gradle, and library dependencies downloaded for local verification. Network transfer/storage were used; their monetary cost was not measured.
 
-1. Complete authenticated branch push and open the prepared PR; do not merge.
+1. Review the published integration PR and its remote CI result; do not merge automatically.
 2. Have the team review the front convention, mechanical inference, and provisional motor directions.
 3. Deploy the reviewed APK and complete the individual motor and combined-motion acceptance stages. Record observations, battery/surface, failures, encoder deltas, and costs in TEST_LOG.csv.
 4. Commit measured per-corner mapping/direction corrections. Establish performance tolerances from real trials.

@@ -1,6 +1,6 @@
 # Software validation — 2026-10-22
 
-Tested implementation commit: **807fa9531d939939ac0a1a25a10aaae53e735c5e**. Subsequent commits contain documentation/CAD evidence only. Baseline: `c9a24af93514cc6a27fa56c0eb7bdf4c22a49692`. These are local results; GitHub Actions has not run on this branch and no robot has been connected or deployed.
+Tested implementation commit: **807fa9531d939939ac0a1a25a10aaae53e735c5e**. Subsequent commits contain documentation/CAD evidence only. Baseline: `c9a24af93514cc6a27fa56c0eb7bdf4c22a49692`. The results below were obtained locally. Remote CI status is tracked on the GitHub pull request; no robot has been connected or deployed.
 
 ## Behavioral tests
 
@@ -54,4 +54,4 @@ The APK is a local build output and is ignored by Git. CI will upload its own bu
 
 The read-only CAD extractor completed with inch/mm conversion and assertions for four drive wheels, four drive motors, ten roller axles per wheel, orthogonal placements, motor/axle cylinder-axis geometry, and 45° roller slants. Evidence and source checksum are in [the CAD audit](CAD_DRIVETRAIN_AUDIT.md). This verifies extraction consistency, not the as-built robot.
 
-Final diff review checks explicit single inversion, exact hardware names, commissioning caps, no stale linear harness, removal of root FourMotor.java, no CI source rewriting, and clean whitespace. GitHub publishing remains blocked by connection write access and missing local Git credentials; a local commit/bundle is not an open PR. [Hardware acceptance](DRIVETRAIN_VALIDATION.md) remains mandatory.
+Final diff review checks explicit single inversion, exact hardware names, commissioning caps, no stale linear harness, removal of root FourMotor.java, no CI source rewriting, and clean whitespace. The feature branch was subsequently published through authenticated Git after the owner completed GitHub CLI sign-in. Review current remote build status on the GitHub pull request. [Hardware acceptance](DRIVETRAIN_VALIDATION.md) remains mandatory.
